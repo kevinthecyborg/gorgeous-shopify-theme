@@ -105,7 +105,7 @@
   },
   "cart": {
     "general": {
-      "title": "Your cart",
+      "title": "Your bag",
       "note": "Add a note to your order",
       "remove": "Remove",
       "subtotal": "Subtotal",
@@ -113,7 +113,7 @@
       "shipping_at_checkout": "Shipping & taxes calculated at checkout",
       "update": "Update",
       "checkout": "Check out",
-      "empty": "Your cart is currently empty.",
+      "empty": "Your bag is currently empty.",
       "edit": "Edit",
       "cancel": "Cancel"
     },
@@ -278,7 +278,7 @@
       "collapse": "collapse"
     },
     "cart": {
-      "title": "Cart",
+      "title": "Bag",
       "items_count": {
         "one": "item",
         "other": "items"
@@ -301,7 +301,7 @@
       "unavailable": "Unavailable",
       "on_sale": "Sale",
       "quantity": "Quantity",
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to bag",
       "back_to_collection": "Back to {{ title }}"
     }
   },
