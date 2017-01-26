@@ -5477,15 +5477,47 @@ $toolbar-height-small: 46px;
   text-align: right;
 }
 
+
+// ALL CUSTOM CODE BELOW
+// ===========================================
+// Notification bar overrides
+.notification-bar {
+  line-height: 1;
+}
+
 // Nav Overrides
 .site-header {
   .grid__item {
     line-height: 0;
   }
 }
+.site-nav a {
+  font-size: 13px;
+}
+.site-nav li:nth-child(7) a {
+  color: #F58EA8;
+}
+.site-header__logo img {
+  margin-bottom: -2px;
+}
 
-// ALL CUSTOM CODE BELOW
-// ===========================================
+// Homepage slideshow
+a#btn-text {
+  margin-top: 150px;
+  background: rgba(0, 0, 0, .7);
+}
+a.slideshow__link:hover {
+  opacity: 1;
+}
+
+//Homepage Gallery
+.image-bar__caption {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 2em;
+  text-shadow: 0 0 15px #111;
+}
+
 // Hide Mobile Add to Cart Button
 .mobile-add-to-cart .product-form__cart-submit {
   display: none;
@@ -5504,6 +5536,13 @@ $toolbar-height-small: 46px;
     border-top: none;
   }
 }
+
+// Footer Overrides
+.site-footer__copyright-content {
+  padding-right: 0;
+}
+
+//
 
 
 // Media Queries
@@ -5524,9 +5563,14 @@ $toolbar-height-small: 46px;
     display: none;
     visibility: hidden;
   }
+  // Homepage slideshow
+  a#btn-text {
+    margin-top: 125px;
+  }
 }
 
 @media only screen and (max-width: 749px) {
+  // Remove side padding of images on homescreen
   .image-bar {
     max-width: none;
   }

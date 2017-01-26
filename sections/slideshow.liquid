@@ -110,6 +110,13 @@
                       {{ block.settings.subheading | escape }}
                     </span>
                   {% endunless %}
+                  <!-- CUSTOM BLOCK -->
+                  {% unless block.settings.btn-text == blank %}
+                    <a class="btn" id="btn-text">
+                      {{ block.settings.btn-text | escape }}
+                    </a>
+                  {% endunless %}
+                  <!-- END CUSTOM BLOCK -->
                   {% if block.type == 'video' %}
                     {% unless block.settings.video_type == 'background' %}
                       <div class="slideshow__video-control--play-wrapper{% if block.settings.title != blank or block.settings.subheading != blank %} slideshow__video-control--play-wrapper--push{% endif %}">
@@ -244,6 +251,12 @@
             "id": "subheading",
             "label": "Subheading",
             "default": "Tell your brand's story through video and images"
+          },
+          {
+            "type": "text",
+            "id": "btn-text",
+            "label": "Button text",
+            "default": "Shop Now"
           },
           {
             "type": "url",
