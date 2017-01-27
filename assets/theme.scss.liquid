@@ -5491,23 +5491,44 @@ $toolbar-height-small: 46px;
     line-height: 0;
   }
 }
-.site-nav a {
-  font-size: 13px;
+.site-nav {
+  margin: 0;
+  a {
+    font-size: 13px;
+    color: #888;
+    &:hover, &:active, &:focus {
+      color: #000;
+      opacity: 1;
+    }
+  }
 }
 .site-nav li:nth-child(7) a {
   color: #F58EA8;
 }
+li.site-nav--active a {
+  color: #000 !important;
+}
 .site-header__logo img {
   margin-bottom: -2px;
+}
+.site-header__cart-count {
+  background-color: #F58EA8;
+}
+
+// Filter / sort bar overrides
+.filters-toolbar__input {
+  font-size: 13px;
 }
 
 // Homepage slideshow
 a#btn-text {
   margin-top: 150px;
-  background: rgba(0, 0, 0, .7);
 }
 a.slideshow__link:hover {
   opacity: 1;
+}
+.slideshow__title, .slideshow__subtitle {
+  text-shadow: 0 0 15px #111;
 }
 
 //Homepage Gallery
@@ -5515,7 +5536,13 @@ a.slideshow__link:hover {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 2em;
-  text-shadow: 0 0 15px #111;
+  text-shadow: 0 0 15px #444;
+}
+#shopify-section-1485301070547 .grid__item:nth-child(3) .image-bar__caption {
+  text-shadow: 0 0 15px #a86f6f;
+}
+#shopify-section-1485301070547 .grid__item:nth-child(3) .image-bar__overlay::before {
+  background-color: transparent;
 }
 
 // Hide Mobile Add to Cart Button
@@ -5542,7 +5569,18 @@ a.slideshow__link:hover {
   padding-right: 0;
 }
 
-//
+//Buttons
+.btn {
+  font-family: "HelveticaNeue";
+  &.product-form__cart-submit {
+    background-color: #F58EA8;
+    &:hover, &:focus {
+      opacity: 1;
+      background-color: #000;
+    }
+  }
+}
+
 
 
 // Media Queries
@@ -5573,5 +5611,16 @@ a.slideshow__link:hover {
   // Remove side padding of images on homescreen
   .image-bar {
     max-width: none;
+  }
+  // Sticky nav
+  .page-container {
+    padding-top: 67px;
+  }
+  #shopify-section-header {
+    position: fixed;
+    z-index: 1;
+  }
+  .site-header {
+    background-color: rgba(255, 255, 255, 0.95);
   }
 }
