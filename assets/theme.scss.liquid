@@ -5547,7 +5547,7 @@ a.slideshow__link:hover {
 }
 
 // Hide Mobile Add to Cart Button
-.mobile-add-to-cart .product-form__cart-submit {
+.mobile-add-to-cart {
   display: none;
   visibility: hidden;
 }
@@ -5591,11 +5591,29 @@ a.slideshow__link:hover {
 }
 
 
+// Beans Rewards Overrides
+.beans-product-div {
+  margin: 10px 0 10px 5px !important;
+  font-size: 14px !important;
+}
+.beans-cart-div {
+  color: #fff;
+  background: #F58EA8;
+  border: none !important;
+}
+
+
 
 // Media Queries
 @media only screen and (max-device-width: 414px) {
   // Fix Add to Cart button to bottom on mobile
   .mobile-add-to-cart {
+    display: block;
+    visibility: visible;
+    .beans-product {
+      display: none;
+      visibility: hidden;
+    }
     .product-form__cart-submit {
       display: block;
       visibility: visible;
@@ -5620,6 +5638,14 @@ a.slideshow__link:hover {
   // Remove side padding of images on homescreen
   .image-bar {
     max-width: none;
+  }
+  // Beans overrides for mobile
+  .template-product #beans-badge-container {
+    bottom: 55px !important;
+  }
+  #beans-section {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   // Sticky nav
   // .page-container {
