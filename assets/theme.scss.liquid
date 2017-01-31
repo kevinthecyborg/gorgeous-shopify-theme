@@ -5496,6 +5496,7 @@ $toolbar-height-small: 46px;
   a {
     font-size: 13px;
     color: #888;
+    transition: all 0.3s ease 0s;
     &:hover, &:active, &:focus {
       color: #000;
       opacity: 1;
@@ -5538,6 +5539,7 @@ a.slideshow__link:hover {
   letter-spacing: 2px;
   font-size: 2em;
   text-shadow: 0 0 15px #444;
+  font-family: "Droid Sans","HelveticaNeue","Helvetica Neue",sans-serif;
 }
 #shopify-section-1485301070547 .grid__item:nth-child(3) .image-bar__caption {
   text-shadow: 0 0 15px #a86f6f;
@@ -5580,16 +5582,16 @@ a.slideshow__link:hover {
 
 //Buttons
 .btn {
-  font-family: "HelveticaNeue";
+  font-family: "Droid Sans","HelveticaNeue","Helvetica Neue",sans-serif;
+  transition: all 0.3s ease 0s;
   &.product-form__cart-submit {
     background-color: #F58EA8;
     &:hover, &:focus {
       opacity: 1;
-      background-color: #000;
+      background-color: #F8B3C5;
     }
   }
 }
-
 
 // Beans Rewards Overrides
 .beans-product-div {
@@ -5646,6 +5648,12 @@ a.slideshow__link:hover {
   #beans-section {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  #beans-section .beans-cta-button {
+    display: block !important;
+    float: none !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
   }
   // Sticky nav
   // .page-container {
